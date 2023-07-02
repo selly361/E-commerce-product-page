@@ -58,3 +58,10 @@ export const ProfileImage = styled.img`
     border-color: #FF7E1B;
   }
 `;
+
+export const Container = styled.div`
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+`

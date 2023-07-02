@@ -1,9 +1,13 @@
-import { Logo, NavLink, StyledHeader, StyledNav, UserNav, ProfileImage } from "./Header.styles";
+import { Logo, NavLink, StyledHeader, StyledNav, UserNav, ProfileImage, Container } from "./Header.styles";
+import { useCartContext } from "hooks/useCartContext"
 
 import { CartIcon } from "Icons"
 
 
 const Header = () => {
+
+  const { onMouseOver, onMouseLeave } = useCartContext()
+
   return (
     <StyledHeader>
       <StyledNav>
@@ -15,7 +19,9 @@ const Header = () => {
         <NavLink href="#Contact">Contact</NavLink>
       </StyledNav>
       <UserNav>
+        <Container onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
         <CartIcon />
+        </Container>
         <ProfileImage src="images/image-avatar.png" />
       </UserNav>
     </StyledHeader>
