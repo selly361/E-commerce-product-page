@@ -20,4 +20,5 @@ export interface ICartContextProps {
     onMouseOver: () => void
     onMouseLeave: () => void
     addToCart: () => void
+    Delete: () => void
 }

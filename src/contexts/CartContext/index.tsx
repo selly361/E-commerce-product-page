@@ -11,20 +11,21 @@ const cart = {
 export const CartContext = createContext<ICartContextProps>({
   cart,
   isCartOpen: false,
-  isCartEmpty: false,
+  isCartEmpty: true,
   incrementQuantity: () => {},
   decrementQuantity: () => {},
   onMouseOver: () => {},
   onMouseLeave: () => {},
   addToCart: () => {},
+  Delete: () => {}
 });
 
 const CartContextProvider = ({ children }: IProps) => {
   const [cart, setCart] = useState({
-    quantity: 0,
+    quantity: 2,
     name: "Fall Limited Edition Sneakers",
     price: 125,
-    totalPrice: 0,
+    totalPrice: 250,
   });
 
   const [quantity, setQuantity] = useState(0);
@@ -48,6 +49,11 @@ const CartContextProvider = ({ children }: IProps) => {
     }
   }
 
+  function Delete(){
+    decrementQuantity()
+    addToCart()
+  }
+
   const isCartEmpty = cart.quantity == 0;
 
   return (
@@ -61,6 +67,7 @@ const CartContextProvider = ({ children }: IProps) => {
         onMouseOver,
         onMouseLeave,
         addToCart,
+        Delete
       }}
     >
       {children}
