@@ -61,6 +61,8 @@ export const ProfileImage = styled.img`
 
 export const Container = styled.div`
     height: 100%;
+    width: 50px;
+    justify-content: center;
     cursor: pointer;
     display: flex;
     align-items: center;
