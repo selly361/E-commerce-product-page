@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { ICartContextProps, IProps } from "./CartContext.types";
 
 const cart = {
@@ -17,7 +17,7 @@ export const CartContext = createContext<ICartContextProps>({
   onMouseOver: () => {},
   onMouseLeave: () => {},
   addToCart: () => {},
-  Delete: () => {}
+  deleteItem: () => {}
 });
 
 const CartContextProvider = ({ children }: IProps) => {
@@ -41,18 +41,22 @@ const CartContextProvider = ({ children }: IProps) => {
     setCart((e) => ({
       ...e,
       quantity: e.quantity + quantity,
-      totalPrice: e.quantity * e.price,
     }));
 
     if (cart.quantity < 0) {
-      setCart((e) => ({ ...e, quantity: 0, totalPrice: e.quantity * e.price }));
+      setCart((e) => ({ ...e, quantity: 0 }));
     }
   }
 
-  function Delete(){
-    decrementQuantity()
-    addToCart()
+  function deleteItem(){
+    setCart(e => ({...e, quantity: e.quantity - 1}))
   }
+
+
+
+  useEffect(() => {
+    setCart(e => ({...e, totalPrice: e.quantity * e.price}))
+  }, [cart.quantity])
 
   const isCartEmpty = cart.quantity == 0;
 
@@ -67,7 +71,7 @@ const CartContextProvider = ({ children }: IProps) => {
         onMouseOver,
         onMouseLeave,
         addToCart,
-        Delete
+        deleteItem
       }}
     >
       {children}
