@@ -67,3 +67,28 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 `
+
+export const SubContainer = styled.div`
+  width: 22px;
+  height: 22px;
+  position: relative;
+`
+
+export const NumberOfItems = styled.div`
+  width: 19px;
+  height: 13px;
+  border-radius: 6.5px;
+  background-color: #ff7e1b;
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: normal;
+
+  display: grid;
+  place-items: center;
+  
+  position: absolute;
+  top: calc(-13px/2);
+  right: calc(-19px/2);
+`;

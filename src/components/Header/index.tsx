@@ -1,12 +1,11 @@
-import { Logo, NavLink, StyledHeader, StyledNav, UserNav, ProfileImage, Container } from "./Header.styles";
-import { useCartContext } from "hooks/useCartContext"
+import { Container, Logo, NavLink, NumberOfItems, ProfileImage, StyledHeader, StyledNav, UserNav, SubContainer } from "./Header.styles";
 
 import { CartIcon } from "Icons"
-
+import { useCartContext } from "hooks/useCartContext"
 
 const Header = () => {
 
-  const { onMouseOver, onMouseLeave } = useCartContext()
+  const { onMouseOver, onMouseLeave, cart } = useCartContext()
 
   return (
     <StyledHeader>
@@ -20,7 +19,10 @@ const Header = () => {
       </StyledNav>
       <UserNav>
         <Container onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+        <SubContainer>
+        {cart.quantity > 0 && <NumberOfItems>{cart.quantity}</NumberOfItems>}
         <CartIcon />
+        </SubContainer>
         </Container>
         <ProfileImage src="images/image-avatar.png" />
       </UserNav>
