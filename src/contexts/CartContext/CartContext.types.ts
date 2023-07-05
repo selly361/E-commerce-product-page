@@ -14,6 +14,7 @@ interface ICart {
 export interface ICartContextProps {
     cart: ICart
     isCartOpen: boolean
+    quantity: number
     isCartEmpty: boolean
     incrementQuantity: () => void
     decrementQuantity: () => void

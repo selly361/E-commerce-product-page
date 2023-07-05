@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from "react";
 import { ICartContextProps, IProps } from "./CartContext.types";
+import { createContext, useEffect, useState } from "react";
 
 const cart = {
   quantity: 0,
@@ -11,6 +11,7 @@ const cart = {
 export const CartContext = createContext<ICartContextProps>({
   cart,
   isCartOpen: false,
+  quantity: 0,
   isCartEmpty: true,
   incrementQuantity: () => {},
   decrementQuantity: () => {},
@@ -66,6 +67,7 @@ const CartContextProvider = ({ children }: IProps) => {
         cart,
         isCartOpen,
         isCartEmpty,
+        quantity,
         incrementQuantity,
         decrementQuantity,
         onMouseOver,
