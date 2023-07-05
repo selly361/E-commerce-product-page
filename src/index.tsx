@@ -1,7 +1,8 @@
 import App from "./App";
 import GlobalStyles from "Global";
 import React from "react";
-import CartContextProvider from "contexts/CartContext"
+import CartContextProvider from "contexts/CartContext";
+import ImagePreviewContextProvider from "contexts/ImagePreviewContext";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <GlobalStyles />
     <CartContextProvider>
-      <App />
+      <ImagePreviewContextProvider>
+        <App />
+      </ImagePreviewContextProvider>
     </CartContextProvider>
   </React.StrictMode>
 );
