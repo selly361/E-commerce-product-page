@@ -8,6 +8,7 @@ interface ISlide {
 
 
 export interface IImagePreviewContextProps {
+    slides: ISlide[]
     currentSlide: ISlide
     previewModal: boolean
     openPreviewModal: () => void
