@@ -25,6 +25,7 @@ const slides = [
 ];
 
 export const ImagePreviewContext = createContext<IImagePreviewContextProps>({
+  slides,
   currentSlide: slides[0],
   previewModal: false,
   openPreviewModal: () => {},
@@ -51,13 +52,14 @@ const ImagePreviewContextProvider = ({ children }: IProps) => {
   const prevSlide = () => setCurrentIndex((e) => e - 1);
 
   const active = (index: number) => (currentIndex == index ? "active" : "");
+  
+  const currentSlide = slides[currentIndex];
 
   useEffect(() => {
     if (currentIndex > 3) setCurrentIndex(0);
     else if (currentIndex < 0) setCurrentIndex(3);
   }, [currentIndex]);
 
-  const currentSlide = slides[currentIndex];
 
   return (
     <ImagePreviewContext.Provider
@@ -70,6 +72,7 @@ const ImagePreviewContextProvider = ({ children }: IProps) => {
         nextSlide,
         prevSlide,
         active,
+        slides
       }}
     >
       {children}
