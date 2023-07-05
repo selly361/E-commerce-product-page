@@ -20,7 +20,9 @@ html {
 
 body {
     max-width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 132px;
 }
 
 h1 {
