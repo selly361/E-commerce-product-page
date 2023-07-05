@@ -1,8 +1,15 @@
-import React from 'react';
+import { Header, Cart, Main } from 'components';
+import { Fragment } from "react"
+
 
 function App() {
+
   return (
-    null
+    <Fragment>
+      <Header />
+      <Cart />
+      <Main />
+    </Fragment>
   );
 }
 
