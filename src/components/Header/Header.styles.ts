@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   height: 112px;
   width: calc(100vw - 330px);
   margin: auto;
-  border-bottom: 1px solid #E4E9F2;;
+  border-bottom: 1px solid #e4e9f2;
 
   display: flex;
   justify-content: space-between;
@@ -53,42 +53,40 @@ export const ProfileImage = styled.img`
   border: 2px solid transparent;
   transition: 500ms ease border;
 
-
   &:hover {
-    border-color: #FF7E1B;
+    border-color: #ff7e1b;
   }
 `;
 
 export const Container = styled.div`
-    height: 100%;
-    width: 50px;
-    justify-content: center;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-`
+  height: 100%;
+  width: 50px;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+`;
 
 export const SubContainer = styled.div`
   width: 22px;
   height: 22px;
   position: relative;
-`
+`;
 
 export const NumberOfItems = styled.div`
-  width: 19px;
-  height: 13px;
+  width: 22px;
+  height: 16px;
   border-radius: 6.5px;
   background-color: #ff7e1b;
   color: #fff;
-
   font-size: 10px;
   font-weight: 700;
   line-height: normal;
 
   display: grid;
   place-items: center;
-  
+
   position: absolute;
-  top: calc(-13px/2);
-  right: calc(-19px/2);
+  top: calc(-16px / 2);
+  right: calc(-22px / 2);
 `;
