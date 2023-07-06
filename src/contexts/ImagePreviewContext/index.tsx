@@ -55,10 +55,8 @@ const ImagePreviewContextProvider = ({ children }: IProps) => {
   
   const currentSlide = slides[currentIndex];
 
-  useEffect(() => {
-    if (currentIndex > 3) setCurrentIndex(0);
-    else if (currentIndex < 0) setCurrentIndex(3);
-  }, [currentIndex]);
+  if (currentIndex > 3) setCurrentIndex(0);
+  else if (currentIndex < 0) setCurrentIndex(3);
 
 
   return (
