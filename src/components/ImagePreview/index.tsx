@@ -7,11 +7,11 @@ import {
 import { useImagePreviewContext } from "hooks/useImagePreviewContext";
 
 const ImagePreview = () => {
-  const { currentSlide, slides, setSlide, active } = useImagePreviewContext();
+  const { currentSlide, slides, setSlide, active, openPreviewModal } = useImagePreviewContext();
 
   return (
     <StyledImagePreview>
-      <StyledImage src={currentSlide.image} />
+      <StyledImage onClick={openPreviewModal} src={currentSlide.image} />
       {slides.map((slide, i) => (
           <ImageThumbnail
             className={active(i)}
