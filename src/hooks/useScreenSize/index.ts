@@ -8,8 +8,8 @@ export const useScreenSize = () => {
   useEffect(() => {
     const handleMediaChange = () => {
       setIsMobileSize(window.innerWidth >= 320 && window.innerWidth <= 767);
-      setIsTabletSize(window.innerWidth >= 768 && window.innerWidth <= 1023);
-      setIsDesktopSize(window.innerWidth >= 1024);
+      setIsTabletSize(window.innerWidth >= 768 && window.innerWidth <= 1123);
+      setIsDesktopSize(window.innerWidth >= 1123);
     };
 
     handleMediaChange();
