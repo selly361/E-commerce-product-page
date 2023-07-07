@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const StyledImageModal = styled.div`
-  width: 500px;
+  width: 400px;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -38,8 +38,8 @@ export const CloseModalContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   position: relative;
   margin-bottom: 16px;
 
@@ -63,8 +63,8 @@ export const ImageContainer = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   border-radius: 15px;
 `;
 
@@ -77,8 +77,8 @@ export const ImageThumbnailContainer = styled.div`
 `;
 
 export const ImageThumbnail = styled.img`
-  width: 88px;
-  height: 88px;
+  width: 70px;
+  height: 70px;
   border-radius: 10px;
   cursor: pointer;
 
