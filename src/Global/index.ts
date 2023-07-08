@@ -56,6 +56,10 @@ a {
 a {
     text-decoration: none;
 }
+
+svg {
+    cursor: pointer;
+}
   
 
 input,
