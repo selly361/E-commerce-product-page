@@ -1,8 +1,9 @@
 import App from "./App";
-import GlobalStyles from "Global";
-import React from "react";
 import CartContextProvider from "contexts/CartContext";
+import GlobalStyles from "Global";
 import ImagePreviewContextProvider from "contexts/ImagePreviewContext";
+import MobileMenuContextProvider from "contexts/MobileMenuContext";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(
@@ -14,7 +15,9 @@ root.render(
     <GlobalStyles />
     <CartContextProvider>
       <ImagePreviewContextProvider>
-        <App />
+        <MobileMenuContextProvider>
+          <App />
+        </MobileMenuContextProvider>
       </ImagePreviewContextProvider>
     </CartContextProvider>
   </React.StrictMode>
