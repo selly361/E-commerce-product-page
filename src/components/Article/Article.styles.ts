@@ -5,6 +5,12 @@ export const StyledArticle = styled.article`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: 900px){
+    & {
+      width: 327px;
+    }
+  }
 `;
 
 export const Tag = styled.p`
@@ -16,9 +22,23 @@ export const Tag = styled.p`
   text-transform: uppercase;
 `;
 
-export const ProductName = styled.h1``;
+export const ProductName = styled.h1`
 
-export const ProductDesc = styled.p``;
+  @media (max-width: 900px){
+    & {
+      font-size: 28px;
+    }
+  }
+`;
+
+export const ProductDesc = styled.p`
+
+@media (max-width: 900px){
+    & {
+      font-size: 15px;
+    }
+  }
+`;
 
 export const PriceContainer = styled.div`
   max-width: 173px;
@@ -27,6 +47,13 @@ export const PriceContainer = styled.div`
   grid-template-columns: max-content max-content;
   column-gap: 16px;
   row-gap: 10px;
+
+  @media (max-width: 900px){
+    & {
+      display: flex;
+      align-items: center;
+    }
+  }
 `;
 
 export const ProductPrice = styled.h2`
@@ -39,6 +66,13 @@ export const ProductPrice = styled.h2`
 export const RetailPrice = styled.p`
   text-decoration-line: line-through;
   color: #b6bcc8;
+
+
+  @media (max-width: 900px){
+    & {
+      margin-left: 98px;
+    }
+  }
 `;
 
 export const SaleTag = styled.div`
@@ -63,6 +97,15 @@ export const StyledFieldSet = styled.fieldset`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 900px){
+    & {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr;
+      place-items: center;
+      row-gap: 16px;
+    }
+  }
 `;
 
 export const ButtonContainer = styled.button`
@@ -75,6 +118,14 @@ export const ButtonContainer = styled.button`
   grid-template-columns: repeat(3, auto);
   align-items: center;
   justify-content: space-around;
+
+
+  @media (max-width: 900px){
+    & {
+      width: 327px;
+    }
+  }
+
 `;
 
 export const Number = styled.p`
@@ -109,4 +160,12 @@ export const AddToCartButton = styled.button`
   svg path {
     fill: white;
   }
+
+
+  @media (max-width: 900px){
+    & {
+      width: 327px;
+    }
+  }
+
 `;

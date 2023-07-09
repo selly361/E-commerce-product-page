@@ -10,4 +10,15 @@ export const StyledMain = styled.main`
     justify-content: center;
     align-items: center;
     padding-top: 90px;
+
+
+    @media (max-width: 1123px){
+        & {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+    }
 `

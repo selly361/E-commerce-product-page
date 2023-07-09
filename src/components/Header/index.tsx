@@ -12,11 +12,13 @@ import {
 } from "./Header.styles";
 
 import { useCartContext } from "hooks/useCartContext";
+import { useMobileMenuContext } from "hooks/useMobileMenuContext";
 import { useScreenSize } from "hooks/useScreenSize";
 
 const Header = () => {
   const { onMouseOver, onMouseLeave, cart } = useCartContext();
   const { isDesktopSize } = useScreenSize();
+  const { openMenu } = useMobileMenuContext();
 
   return (
     <StyledHeader>
@@ -32,7 +34,7 @@ const Header = () => {
           </>
         ) : (
           <>
-            <MenuIcon />
+            <MenuIcon onClick={openMenu} />
             <Logo />
           </>
         )}

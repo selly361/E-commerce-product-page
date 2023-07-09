@@ -7,6 +7,14 @@ export const StyledImagePreview = styled.div`
   grid-template: 445px 88px / repeat(5, 88px);
   row-gap: 32px;
   column-gap: 31px;
+
+  @media (max-width: 900px) {
+    & {
+      display: static;
+      width: 375px;
+      height: 300px;
+    }
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -34,7 +42,32 @@ export const ImageThumbnail = styled.img`
   &:hover {
     filter: grayscale(0%);
   }
-
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  width: max-content;
+  height: 300px;
+  position: relative;
+
+  svg {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  svg:nth-child(1) {
+    left: 40px;
+  }
+
+  svg:nth-child(3) {
+    right: 40px;
+  }
+`;
+
+export const MobileImage = styled.img`
+  width: 375px;
+  height: 300px;
+  object-fit: contain;
+`;

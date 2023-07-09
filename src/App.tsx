@@ -1,4 +1,4 @@
-import { Cart, Header, Main, Overlay, ImageModal } from "components";
+import { Cart, Header, Main, Overlay, ImageModal, MobileMenu } from "components";
 
 import { Fragment } from "react";
 
@@ -10,6 +10,7 @@ function App() {
       <Main />
       <Overlay />
       <ImageModal />
+      <MobileMenu />
     </Fragment>
   );
 }
