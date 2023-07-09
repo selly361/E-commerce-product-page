@@ -9,6 +9,14 @@ export const StyledHeader = styled.header`
 
   display: flex;
   justify-content: space-between;
+
+
+  @media (max-width: 1123px){
+    & {
+  width: calc(100vw - 50px);
+
+    }
+  }
 `;
 
 export const StyledNav = styled.nav`
